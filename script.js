@@ -510,33 +510,6 @@ loadingImgClick.addEventListener('click', () => {
     headerImg.style.filter = "brightness(1)";
     headerImg.style.webkitFilter = "brightness(1)";
 
-
-    var first_visit = false;
-    let data = window.performance.getEntriesByType("navigation")[0].type;
-
-    checkFirstVisit();
-    function checkFirstVisit(){
-        first_visit = true;
-        localStorage.setItem('was_visited', 1);
-
-        if(data == "reload" && localStorage.getItem('was_visited')){
-          headerPromptContainer.style.display = "none";
-        }
-
-        if(data == "navigate" && localStorage.getItem('was_visited')){
-          headerPromptContainer.style.display = "none";
-        }
-
-        if(data == "reload"){
-          headerPromptContainer.style.display = "flex";
-          return localStorage.getItem('was_visited');
-        }
-
-        if(localStorage.getItem('was_visited')){
-            return;
-        }
-    }
-
   },1100)
   setTimeout(()=>{
     loadingImgClick.classList.remove('pointNone');
