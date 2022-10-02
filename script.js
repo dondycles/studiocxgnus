@@ -10,7 +10,7 @@ const loadingBG = document.querySelector(".loadingBG"), loadingBGRight = documen
 //onLoadAnimations
 function onLoad() {
   menu.classList.toggle('loading');
-  
+
   navLoadingContainer.classList.toggle('active');
   navLoadingContainer.classList.remove('collapse');
   menu.classList.remove('fadeIn');
@@ -938,11 +938,12 @@ chatSideBarArrowsContainer.addEventListener('click', function(){
   headerManifesto.classList.add('active')
   headerAbout.classList.add('active')
 
+  patchLogoSide.classList.add('active')
 
   headerFaqTitleImg.classList.add('hide');
 
   phoneContainer.classList.toggle('active');
-  chatSideBarContainer.classList.toggle('active');
+  chatSideBarContainer.classList.add('focus');
   phoneArrowLeft.classList.add('active');
   headerHeadlines.classList.add('active');
   headerSneakPeeksGallery.classList.add('active');
@@ -958,7 +959,7 @@ chatSideBarArrowsContainer.addEventListener('click', function(){
     headerSneakPeeksReveal.classList.remove('active');
   }
 })
-
+        
 
 
 const chatContainer = document.querySelector('.chatContainer');
@@ -1095,6 +1096,9 @@ phoneArrowLeft.addEventListener('click', function(){
   headerManifesto.classList.remove('active')
   headerAbout.classList.remove('active')
 
+  patchLogoSide.classList.remove('active')
+
+
   headerAboutCard.classList.remove('active');
   headerAboutImg1.classList.remove('aboutActive');
   phoneContainer.classList.remove('aboutActive');
@@ -1115,7 +1119,7 @@ phoneArrowLeft.addEventListener('click', function(){
   headerSneakPeeksGallery.classList.remove('active');
   phoneContainer.classList.remove('active');
   phoneContainer.classList.remove('aboutActive');
-  chatSideBarContainer.classList.toggle('active');
+  chatSideBarContainer.classList.remove('focus');
   phoneArrowLeft.classList.remove('active');
   headerHeadlines.classList.remove('active');
 
@@ -1189,13 +1193,13 @@ let peekInfo = [
     name: "YASHA",
     skillIntro: "A CXGNUS who is contracted to the demon.",
 
-    skill1: "Empress of Darkness/Malignant Omen",
+    skill1: "Empress of Darkness",
     skill1d: "Allows the user to transform into their dark form enhancing their physical and magic capabilities.",
 
     skill2: "Demon’s Touch",
     skill2d: "Enables the user to turn anything they touch into a cursed weapon.",
 
-    skill3: "Demon/Shadow Affinity",
+    skill3: "Demon Affinity",
     skill3d: "User calls on Cursed Spirits when injured for healing. Cursed Spirits cannot be used for offensive attacks.",
 
     oskill1: "Drift",
@@ -1370,6 +1374,7 @@ headerPeekImg[0].addEventListener('click', function(){
   phoneArrowLeft.classList.remove('active');
   headerHeadlines.classList.remove('active');
   headerSneakPeeksReveal.classList.add('active');
+  patchLogoSide.classList.add('active')
 
   revealDialogueGIF.src = "/imgs/header/sneakPeeks/yasha.gif"
 
@@ -1462,6 +1467,7 @@ headerPeekImg[1].addEventListener('click', function(){
   phoneArrowLeft.classList.remove('active');
   headerHeadlines.classList.remove('active');
   headerSneakPeeksReveal.classList.add('active');
+  patchLogoSide.classList.add('active')
   
   clan.classList.add('borderAnim');
   setTimeout(function(){
@@ -1552,6 +1558,7 @@ headerPeekImg[2].addEventListener('click', function(){
   phoneArrowLeft.classList.remove('active');
   headerHeadlines.classList.remove('active');
   headerSneakPeeksReveal.classList.add('active');
+  patchLogoSide.classList.add('active')
 
   clan.classList.add('borderAnim');
   setTimeout(function(){
@@ -1642,6 +1649,7 @@ headerPeekImg[3].addEventListener('click', function(){
   phoneArrowLeft.classList.remove('active');
   headerHeadlines.classList.remove('active');
   headerSneakPeeksReveal.classList.add('active');
+  patchLogoSide.classList.add('active')
  
   clan.classList.add('borderAnim');
   setTimeout(function(){
@@ -1733,6 +1741,7 @@ headerPeekImg[4].addEventListener('click', function(){
   phoneArrowLeft.classList.remove('active');
   headerHeadlines.classList.remove('active');
   headerSneakPeeksReveal.classList.add('active');
+  patchLogoSide.classList.add('active')
 
   clan.classList.add('borderAnim');
   setTimeout(function(){
@@ -1824,6 +1833,7 @@ headerPeekImg[5].addEventListener('click', function(){
   phoneArrowLeft.classList.remove('active');
   headerHeadlines.classList.remove('active');
   headerSneakPeeksReveal.classList.add('active');
+  patchLogoSide.classList.add('active')
 
   clan.classList.add('borderAnim');
   setTimeout(function(){
@@ -1854,8 +1864,9 @@ for(let i = 0; i < closeTrigger.length; i++){
       headerSneakPeeksReveal.classList.remove('active');
       revealDialogueGIFCard.classList.remove('animate')
       revealDialogueCard.classList.remove('animate')
-    headerPeek[i].classList.remove('focus')
-    headerPeek[i].classList.remove('hover')
+      headerPeek[i].classList.remove('focus')
+      headerPeek[i].classList.remove('hover')
+      patchLogoSide.classList.remove('active')
 
   });
 
@@ -1943,16 +1954,17 @@ headerFaqTitleImg.addEventListener('click', function(){
   chatSideBarContainer.classList.toggle('active');
   headerSneakPeeksGallery.classList.toggle('active');
   headerFaqCard.classList.toggle('active');
-  headerFaqTitleImg.classList.toggle('active');
+  headerFaqTitleImg.classList.add('focus');
+  patchLogoSide.classList.add('active')
 })
 headerFaqExit.addEventListener('click', function(){
   musicOpen.classList.remove('active');
   arrowMusicL.classList.remove('active');
-
+  patchLogoSide.classList.remove('active')
   chatSideBarContainer.classList.toggle('active');
   headerSneakPeeksGallery.classList.toggle('active');
   headerFaqCard.classList.toggle('active');
-  headerFaqTitleImg.classList.toggle('active');
+  headerFaqTitleImg.classList.remove('focus');
 })
 
 const headerPromptContainer = document.querySelector('.headerPromptContainer'),
@@ -2254,7 +2266,7 @@ let chap1Content = [
   },
   {
     chap1Title: "LEVEL-UP SYSTEM",
-    chap1Content: "- The maximum level as of the early stages will be level 50.<br>- By staking and executing CXGA missions your CXGNUS hero will earn EXP points to achieve new levels.<br>- There will be level-up milestone perks that will be announced in the later part <span>[The milestone perks will consist of exclusive raffle entries.]</span>",
+    chap1Content: "- There will be level-up milestone perks that will be announced in the latter part of your journey. <br> <span>[The milestone perks will consist of exclusive raffle entries.]</span>",
     page: "page 4 out of 5"
   },
   {
@@ -2990,11 +3002,14 @@ cBA.addEventListener('click', function(){
 
 const patchTrig = document.querySelector('.patchTrig')
 const patchNotesContainer = document.querySelector('.patchNotesContainer')
+const patchLogoSide = document.querySelector('.patchLogoSide')
 const promptButtonPatch = document.querySelector('.promptButtonPatch')
 
 patchTrig.addEventListener('click', function(){
   patchNotesContainer.classList.add('active')
+  patchLogoSide.classList.add('focus')
 })
 promptButtonPatch.addEventListener('click', function(){
   patchNotesContainer.classList.remove('active')
+  patchLogoSide.classList.remove('focus')
 })
