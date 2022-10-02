@@ -10,6 +10,7 @@ const loadingBG = document.querySelector(".loadingBG"), loadingBGRight = documen
 //onLoadAnimations
 function onLoad() {
   menu.classList.toggle('loading');
+  
   navLoadingContainer.classList.toggle('active');
   navLoadingContainer.classList.remove('collapse');
   menu.classList.remove('fadeIn');
