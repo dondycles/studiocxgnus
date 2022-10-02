@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en" class="html">
+  <head>
+    <title>CXGNUS</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="CXGNUS">
+    <meta name="description" content="CXGNUS is a brand that fosters friendships, builds experiences, and creates memories among anime lovers, gamers, and fasion enthusiasts while also removing the tradition of gatekeeping for the newcomers to the space because we believe that they have a special place in web3. NFT is not just about making money, it is about building connections and making memories with other people just as when you were a kid, playing a videogame for the first time, and starting a new adventure in a new world.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CXGNUS">
+    <meta property="og:description" content="CXGNUS is a brand that fosters friendships, build experiences, and creates memories among anime lovers, gamers, and fasion enthusiasts while also removing the tradition of gatekeeping for the newcomers to the space because we believe that they have a special place in web3. NFT is not just about making money, it is about building connections and making memories with other people just as when you were a kid, playing a videogame for the first time, and starting a new adventure in a new world.">
+    <meta property="og:image" content="/imgs/logo.png">
+    <link rel="icon" type="image/png" href="imgs/logo.png" />
+    <link rel="preload" href="styles/styles.css" as="style" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"
+      defer
+    ></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      defer
+    ></script>
+    <script src="/script.js" defer></script>
+  </head>
+  
+  <body class="body" ondragstart="return false;" ondrop="return false;">
+    <div  class="initialLoadingContainer">
+      <div class="progressbarContainer">
+        <div class="progressBarBorder">
+          <div class="progressBar"></div>
+        </div>
+      </div>
+      
+
+      <div class="loaderGalleryOutterContainer">
+        <div class="loaderGalleryInnerContainer">
+          <div class="revealUsText">
+            <p>REVEAL US</p>
+          </div>
+          <div class="loaderGalleryContainer">
+            <div><img src="/imgs/sil/gp1.webp" class="galleryPart1" alt="" srcset=""></div>
+            <div><img src="/imgs/sil/gp2.webp" class="galleryPart2" alt="" srcset=""></div>
+            <div><img src="/imgs/sil/gp3.webp" class="galleryPart3" alt="" srcset=""></div>
+            <div><img src="/imgs/sil/gp4.webp" class="galleryPart4" alt="" srcset=""></div>
+            <div><img src="/imgs/sil/gp5.webp" class="galleryPart5" alt="" srcset=""></div>
+            <div><img src="/imgs/sil/gp6.webp" class="galleryPart6" alt="" srcset=""></div>
+          </div>
+          <div class="loadingParagraph">
+            <p>Please wear earphones for better experience!</p>  
+          </div>
+          <div class="loaderImgContainer">
+            <div class="loadingImgClick"> <p class="loadingImgP">RESONATE</p> </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="initializingContainer">
+        <p class="initializingP">INITIALIZING...</p>
+      </div>
+    </div>
+
+    <div  onload="onLoad()" class="main">
+      <div class="topBlur"></div>
+
+      <div class="loadingBG">
+        <div class="loadingBGLeft"></div>
+        <div class="loadingBGRight"></div>
+        <div class="loadingBGBottom"></div>
+        <div class="loadingBGTop"></div>
+        <div class="rotatingLoader">
+          <img class="rotatingLoaderImg" src="/imgs/mascotLoading.webp" alt="" srcset="">
+        </div>
+      </div>
+
+      <div class="audioContainer" id="audioContainer">
+        <div id="musicOpen">
+          <img id="arrowMusicL" src="imgs/arrowLW.png" alt="" />
+          <img class="disk" src="imgs/disk.png" alt="" />
+        </div>
+
+        <div class="audioContainer3">
+          <div class="songArtWork">
+            <img id="artWork" src="" alt="">
+          </div>
+          <div class="songNameButtonsContainer">
+            <div class="songArtistContainer">
+              <h3 id="artistName"></h3>
+              <h3 id="songName"></h3>
+            </div>
+            <div class="audioProgBarContainer">
+              <div class="audioProgBar"></div>
+            </div>
+            <div id="audioButtons">
+              <img
+                id="prevMusic"
+                class="prevmusic"
+                src="imgs/prevmusic.png"
+                alt=""
+              />
+              <img id="playMusic" class="playmusic" src="imgs/play.png" alt="" />
+              <img
+                id="pauseMusic"
+                class="pausemusic"
+                src="imgs/pause.png"
+                alt=""
+              />
+              <img
+                id="nextMusic"
+                class="nextmusic"
+                src="imgs/nextmusic.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="volumeContainer">
+            <input
+              type="range"
+              orient="vertical"
+              id="volumeSlide"
+              min="0"
+              max="100"
+              step="1"
+              value="50"
+              oninput="setVolume(this.value)"
+              onchange="setVolume(this.value)"
+            />
+          </div>
+          <div id="musicClose">
+            <img id="arrowMusicR" src="imgs/arrowRW.png" alt="" />
+          </div>
+        </div>
+        <audio id="music" src=""></audio>
+      </div>
+
+      <div class="menuToggle" id="menuToggle">
+        <div id="arrow">
+          <div id="menu">
+            <div class="menuOutter">
+              <div id="bottomLine"></div>
+              <div id="upperLine"></div>
+            </div>
+          </div>
+        </div>
+        <div class="navLoadingContainer">
+          <div class="navLoading redPart"></div>
+          <div class="navLoading orangePart"></div>
+        </div>
+      </div>
+
+      <div class="menuMainContainer">
+        <div class="navBgImgContainer">
+          <img class="navBgImg" src="/imgs/menu/menuBg.webp"/>
+          <img class="navBgImgDots" src="/imgs/menu/dots.webp" alt="">
+          <div class="navBgSparkleContainer">
+            <img class="navBgSparkle" src="imgs/menu/sparkles.webp" alt="">
+            <img class="navBgSparkle" src="imgs/menu/sparkles.webp" alt=""> 
+            <img class="navBgSparkle" src="imgs/menu/sparkles.webp" alt=""> 
+            <img class="navBgSparkle" src="imgs/menu/sparkles.webp" alt=""> 
+            <img class="navBgSparkle" src="imgs/menu/sparkles.webp" alt="">
+            <img class="navBgSparkle" src="imgs/menu/sparkles.webp" alt=""> 
+            <img class="navBgSparkle" src="imgs/menu/sparkles.webp" alt=""> 
+            <img class="navBgSparkle" src="imgs/menu/sparkles.webp" alt=""> 
+          </div>
+          
+        </div>
+
+        <div class="menuPromptContainer">
+          <div class="menuPromptCard">
+            <div class="promptRedLine"></div>
+            <div class="promptContent">
+              <div class="promptTitle">
+                <p>ANNOUNCEMENT</p>
+              </div>
+              <div class="promptP"> 
+                <p>Hey! We are sorry to inform you, but we are still currently in the beta phase. More things will be available as the day goes on. Stay tuned and wait for the announcement!</p>
+              </div>
+            </div>
+            <div class="promptButton">
+              <p>UNDERSTOOD</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mavMainMenuContainer">
+          <div class="navMainMenuLeft">
+            <div class="leftMenusContainer">
+              <div class="leftMenuItemContainer" id="leftMenuHome">
+                <img class="leftMenuItemImg" src="/imgs/menu/home.png" alt="">
+              </div>
+              <div class="leftMenuItemContainer" >
+                <img class="leftMenuItemImg" src="/imgs/menu/mint.png" alt="">
+              </div>
+              <div class="leftMenuItemContainer">
+                <img class="leftMenuItemImg" src="/imgs/menu/yearbook.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="navMainMenuCenter">
+            <div id="centerMenuTeam">
+              <img class="centerMenuItemImg" src="/imgs/menu/team.png" alt="">
+            </div>
+          </div>
+          <div class="navMainMenuRight">
+            <div class="rightMenusContainer">
+              <div class="rightMenuItemContainer">
+                <img class="rightMenuItemImg" src="/imgs/menu/utility.png" alt="">
+              </div>
+              <div class="rightMenuItemContainer">
+                <img class="rightMenuItemImg" src="/imgs/menu/staking.png" alt="">
+              </div>
+              <div class="rightMenuItemContainer" id="rightMenuMap">
+                <img class="rightMenuItemImg" src="/imgs/menu/cxgnus map.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainBodySection">
+        <div id="mainPage">
+
+          <div class="headerContainer">
+            <div class="headerImgContainer">
+              <img class="headerImg" alt="Header Wallpaper" src="" />
+            </div>
+
+            
+          
+            <div class="timedateContainer">
+              <div class="sunMoonContainer">
+                <img class="clouds" src="" alt="">
+                <img class="moon" src="" alt="">
+              </div>
+              <div class="timeDateDesign">
+                <p class="hrs"></p>
+                <div class="minsContainer">
+                  <p>:</p>
+                  <p class="mins"></p>
+                </div>
+                <div class="secsContainer">
+                  <p>:</p>
+                  <p class="secs"></p>
+                </div>
+                <div class="amPmContainer">
+                  <p class="amPm"></p>
+                </div>
+                <div class="utcContainer">
+                  <p>UTC</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="patchLogoSide">
+              <img class="patchTrig" src="/imgs/header/patchnotes.webp" alt="">
+            </div>
+            
+            <div class="patchNotesContainer">
+              <div class="patchNotesScrollableContainer">
+                <div class="patchNotesCard">
+                  <div class="promptRedLinePatch"></div>
+                  <div class="promptContent">
+                    <div class="promptTitle">
+                      <p>WELCOME</p>
+                    </div>
+                    <div class="promptP"> 
+                        <br><br>
+                        <p class="updateTitle">*PATCH NOTES 1.0 <br class="updateTitle">2022/10/01</p>
+                        <br><br>
+                        How does everyone like CXGNUS’s website so far? Nevertheless, the team is constantly working on improving and adding new content to the website. Below are the new contents and minor updates we’ve done over the past week.
+                        <br><br><br>
+                        <p class="updateTitle">USER INTERFACE</p>
+                        > Font sizes have been adjusted for better viewing.
+                        <br>
+                        > Icon sizes for menu, phone, and FAQ sections have been adjusted for better viewing. <br>
+                        > Issues with mobile and tablet ports have been fixed.
+                        <br><br>
+                       <p class="updateTitle">CXGNUS ALPHA TEAM</p>
+                        > Sneak peeks of Rank 1 CXGNUS Alpha Team have been completed. Get to know them by clicking on their icons on the home page!
+                        <br><br>
+                        <p class="updateTitle">MENU CONTENT</p>
+                        Click the button on the upper left part of the screen to access the menu.
+                        <br><br>
+                        > Meet the minds behind CXGNUS. The Team page has been released! 
+                        <br>
+                        > Still not convinced to join in on our adventure? The CXGNUS Map (Roadmap) has been released! Check out all the amazing things we have in store for you. <br>
+                        <i> <span>
+                          *Roadmap contents are still subject to change
+                        </span> </i> 
+                        <br><br>
+                        <i>
+                          <span>Developer Note: </span> For better website viewing/experience, it is recommended to access CXGNUS website on your desktop or Google Chrome browsers for the mobile and tablet versions. Bug reports and suggestions may be reported by opening a ticket on the CXGNUS Discord server.
+                        </i>
+                        <br>
+                        <br>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="promptButtonPatch">
+                  <p>UNDERSTOOD</p>
+                </div>
+              </div>
+              
+            </div>
+            <div class="headerPromptContainer">
+              <div class="headerPromptCard">
+                <div class="promptRedLine"></div>
+                <div class="promptContent">
+                  <div class="promptTitle">
+                    <p>WELCOME</p>
+                  </div>
+                  <div class="promptP"> 
+                    <p>Hey, you there! (Familiarize yourself around here so you don’t get lost.) Click on the icon below the phone to access Patch Notes 1.0 for updates on the changes and contents we’ve made on the website. The menu can be accessed on the upper left side of the page. Enjoy!</p>
+                  </div>
+                </div>
+                <div class="promptButton">
+                  <p>UNDERSTOOD</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="chatSideBarContainer">
+              <div class="chatSideBar">
+                <img class="chatTrigger" src="/imgs/chats/phoneIconSideBar.png" alt="">
+              </div>
+            </div>
+
+            <div class="chatContainer">
+              
+              <div class="phoneContainer">
+                <div class="phoneNotch">
+                </div>
+                <div class="phoneScreen">
+                  <img class="bgWhiteDots" src="/imgs/chats/bgWhiteDots.png" alt="">
+                  <img class="bgBlackDots" src="/imgs/chats/bgBlackDots.png" alt="">
+                  <div class="bgCirclesContainer">
+                    <img class="bgCircles" src="/imgs/chats/bgCirles.png" alt="">
+                    <img class="bgCircles" src="/imgs/chats/bgCirles.png" alt="">
+                    <img class="bgCircles" src="/imgs/chats/bgCirles.png" alt="">
+                  </div>
+                  <div class="bgTrianglesContainer">
+                    <img class="bgTriangles" src="/imgs/chats/bgTraingles.png" alt="">
+                    <img class="bgTriangles" src="/imgs/chats/bgTraingles.png" alt="">
+                    <img class="bgTriangles" src="/imgs/chats/bgTraingles.png" alt="">
+                  </div>
+                  <div class="bgDiamondsContainer">
+                    <img class="bgDiamonds" src="/imgs/chats/bgDiamonds.png" alt="">
+                    <img class="bgDiamonds" src="/imgs/chats/bgDiamonds.png" alt="">
+                    <img class="bgDiamonds" src="/imgs/chats/bgDiamonds.png" alt="">
+                  </div>
+                  
+                  
+                  <div class="phoneScreenDisplay">
+                    <div class="resonateButton">
+                      <p>RESONATE</p>
+                    </div>
+                    <div class="phoneChatTitle">
+                      <div>C</div>
+                      <div>-</div>
+                      <div>H</div>
+                      <div>U</div>
+                      <div>B</div>
+                    </div>
+                    <div class="phoneChatContainer">
+
+
+
+                      <div class="chatMessageContainer">
+                        <div class="pfpAvatar">
+                          <img src="/imgs/chats/yui.webp" alt="">
+                        </div>
+                        <div class="messageContentContainer">
+                          <p>
+                            Hey! Is anybody coming with me tonight? Let's explore the lower city during the dark hour! Wanna try my new invented gun tehee.
+                          </p>
+                          <img class="chatExc" src="/imgs/chats/exc.png" alt="">
+                          <img class="chatTail" src="/imgs/chats/chatTail.png" alt="">
+                        </div>
+                      </div>
+                      <div class="chatMessageContainer">
+                        <div class="pfpAvatar">
+                          <img src="/imgs/chats/yasha.webp" alt="">
+                        </div>
+                        <div class="messageContentContainer">
+                          <p>
+                            Alright, be sure not to get overcarried exploring and get split to the party like last time. 
+                          </p>
+                          <img class="chatExc" src="/imgs/chats/exc.png" alt="">
+                          <img class="chatTail" src="/imgs/chats/chatTail.png" alt="">
+                        </div>
+                      </div>
+                      <div class="chatMessageContainer">
+                        <div class="pfpAvatar">
+                          <img src="/imgs/chats/iino.webp" alt="">
+                        </div>
+                        <div class="messageContentContainer">
+                          <p>
+                            Uhmm.. let's make it fast, okay? I don't wanna miss tomorrow morning's supermarket sale. I'll cook tasty dishes this week. 
+                          </p>
+                          <img class="chatExc" src="/imgs/chats/exc.png" alt="">
+                          <img class="chatTail" src="/imgs/chats/chatTail.png" alt="">
+                        </div>
+                      </div>
+                      <div class="chatMessageContainer">
+                        <div class="pfpAvatar">
+                          <img src="/imgs/chats/yui.webp" alt="">
+                        </div>
+                        <div class="messageContentContainer">
+                          <p>
+                            Got it, gals! Btw, where are the boys? They ain't replying, huh? 
+                          </p>
+                          <img class="chatExc" src="/imgs/chats/exc.png" alt="">
+                          <img class="chatTail" src="/imgs/chats/chatTail.png" alt="">
+                        </div>
+                      </div>
+                      <div class="chatMessageContainer">
+                        <div class="pfpAvatar">
+                          <img src="/imgs/chats/yasha.webp" alt="">
+                        </div>
+                        <div class="messageContentContainer">
+                          <p>
+                            Maybe doing some boys' stuff.
+                            <p>
+                          <img class="chatExc" src="/imgs/chats/exc.png" alt="">
+                          <img class="chatTail" src="/imgs/chats/chatTail.png" alt="">
+                        </div>
+                      </div>
+                      <div class="chatMessageContainer">
+                        <div class="pfpAvatar">
+                          <img src="/imgs/chats/iino.webp" alt="">
+                        </div>
+                        <div class="messageContentContainer">
+                          <p>
+                            I think Yuki Senpai is currently scouting near the coastal area. While Rai-san is hanging out in his skate park.. I don't know about Touya senpai though. 
+                            <p>
+                          <img class="chatExc" src="/imgs/chats/exc.png" alt="">
+                          <img class="chatTail" src="/imgs/chats/chatTail.png" alt="">
+                        </div>
+                      </div>
+                      <div class="chatMessageContainer">
+                        <div class="pfpAvatar">
+                          <img src="/imgs/chats/yasha.webp" alt="">
+                        </div>
+                        <div class="messageContentContainer">
+                          <p>
+                            Touya? Bet he is hunting some shadows with his muscle head taha! 
+                            <p>
+                          <img class="chatExc" src="/imgs/chats/exc.png" alt="">
+                          <img class="chatTail" src="/imgs/chats/chatTail.png" alt="">
+                        </div>
+                      </div>
+                      <div class="chatMessageContainer">
+                        <div class="pfpAvatar">
+                          <img src="/imgs/chats/yui.webp" alt="">
+                        </div>
+                        <div class="messageContentContainer">
+                          <p>
+                            Touya really resonates with his power, huh? Ohh! Let's go find Touya. Bet he'll come with us! (since it's about fighting) 
+                            <p>
+                          <img class="chatExc" src="/imgs/chats/exc.png" alt="">
+                          <img class="chatTail" src="/imgs/chats/chatTail.png" alt="">
+                        </div>
+                      </div>
+                      <div class="chatMessageContainer">
+                        <div class="pfpAvatar">
+                          <img src="/imgs/chats/yasha.webp" alt="">
+                        </div>
+                        <div class="messageContentContainer">
+                          <p>
+                            Lol ok, see u at midnight! 
+                            <p>
+                          <img class="chatExc" src="/imgs/chats/exc.png" alt="">
+                          <img class="chatTail" src="/imgs/chats/chatTail.png" alt="">
+                        </div>
+                      </div>
+                      <div class="chatMessageContainer">
+                        <div class="pfpAvatar">
+                          <img src="/imgs/chats/iino.webp" alt="">
+                        </div>
+                        <div class="messageContentContainer">
+                          <p>
+                            Don't be late, please. I'll bring some medicine kit just in case. 
+                            <p>
+                          <img class="chatExc" src="/imgs/chats/exc.png" alt="">
+                          <img class="chatTail" src="/imgs/chats/chatTail.png" alt="">
+                        </div>
+                      </div>
+                      <div class="chatMessageContainer">
+                        <div class="pfpAvatar">
+                          <img src="/imgs/chats/yui.webp" alt="">
+                        </div>
+                        <div class="messageContentContainer">
+                          <p>
+                            Ok!!
+                            <p>
+                          <img class="chatExc" src="/imgs/chats/exc.png" alt="">
+                          <img class="chatTail" src="/imgs/chats/chatTail.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="phoneHomeButton">
+                  <img src="/imgs/header/power-off.png" alt="">
+                </div>
+                <div class="phoneArrowLeft">
+                  <img src="/imgs/chats/phonerRedArrowBack.png" alt="">
+                </div>
+
+                <div class="phoneBlackBg"></div>
+                  
+                <div class="headerDC">
+                  <a href="https://discord.com/invite/sVsdPmFHsy" target="_blank">
+                  <img class="headerDiscordImg1" src="/imgs/header/sideDiscord.webp" alt="">
+                  <img class="headerDiscordImg2" src="/imgs/header/bottomDiscord.webp" alt="">
+                </a>
+                </div>
+                <div class="headerTW">
+                  <a href="https://twitter.com/cxgnusnft" target="_blank">
+                    <img class="headerTwitterImg1" src="/imgs/header/sideTwitter.webp" alt="">
+                    <img class="headerTwitterImg2" src="/imgs/header/bottomTwitter.webp" alt="">
+                  </a>
+                </div>
+                <div class="headerAbout">
+                  <img class="headerAboutImg1" src="/imgs/header/sideAbout.webp" alt="">       
+                  <img class="headerAboutImg2" src="/imgs/header/bottomAbout.webp" alt="">
+                  <div class="headerAboutCard">
+                    <div class="headerAboutTitle">
+                      <p>ABOUT</p>
+                    </div>
+                    <div class="headerAboutP">
+                      <p>
+                        CXGNUS is an Anime NFT Project headed by YUTA, with Co-Founder Suoh, and developed by Dondycles and Shibakinu, in the production of Studio CXGNUS. The studio is led by Head Artist Suoh with a wonderful team composed of Freshcakes and Nemurin. The lore’s OST/music is produced by Xius
+                        <br> <br>
+                        Ever wondered what it feels like to be part of an anime story? Minting one means transporting a character between NFT space and the world of CXGNUS.
+                        <br> <br>
+                          <i>Join us as we embark on an adventure and a new age of storytelling with five thousand ESPers in the space!</i>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="headerManifesto">
+                  <img class="headerManifestoImg1" src="/imgs/header/sideManifesto.webp" alt="">
+                  <img class="headerManifestoImg2" src="/imgs/header/bottomManifesto.webp" alt="">
+
+                  <div class="headerManifestoCard">
+                    <div class="headerManifestoTitle">
+                      <p>MANIFESTO</p>
+                    </div>
+                    <div class="headerManifestoP">
+                      <p>
+                        <strong style="font-size: 15px;">Make Memories, Build Together.</strong>  
+                        <br><br>
+                        The space is full of surprises and innovation every single day, bringing opportunities to learn and discover new things. We want to create a place- specifically, a home where everyone can learn and grow together, enjoying what life has to offer, while being true to our natural and authentic self without the fear of being seen by others. This is the difference that we want to make.
+                        <br><br>
+                        Here at CXGNUS, we are a collection of fictional characters reminding you to appreciate little things and enjoy the adventures of life.
+                        <br><br>
+                        <i>NFT isn’t just a piece of blockchain. It’s a piece of yourself that will live forever and will be a reminder that you existed. </i> 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="headerHeadlines">
+              <div class="headerNews">
+                <p class="headerNewsP">ANNOUNCEMENT!
+                  TO ALL CXGNUS PERSONNEL: PLEASE BE CAREFUL ON CLEARING THE CITY TONIGHT. SHADOWS HAVE BEEN MORE AGGRESSIVE THESE PAST FEW DAYS. ALWAYS BE CAUTIOUS WHEN ROVING AROUND THE CITY... DON'T GO ALONE, ALWAYS ROAM AROUND IN GROUPS DURING THE RED HOUR. STAY VIGILANT!
+                </p>
+              </div>
+
+              <div class="headerSneakPeeksGallery">
+                <div class="peeksContainer">
+                  <div class="headerPeek" style="--delay: 0s">
+                    <div class="closeTrigger"></div>
+                    <img class="headerPeekImg" src="" alt="" >
+                    <div class="redLine"></div>
+                  </div>
+                  <div class="headerPeek" style="--delay: .3s">
+                    <div class="closeTrigger"></div>
+                    <img class="headerPeekImg" src="" alt="" >
+                    <div class="redLine"></div>
+                  </div>
+                  <div class="headerPeek" style="--delay: .6s">
+                    <div class="closeTrigger"></div>
+                    <img class="headerPeekImg" src="" alt="" >
+                    <div class="redLine"></div>
+                  </div>
+                  <div class="headerPeek" style="--delay: .9s">
+                    <div class="closeTrigger"></div>
+                    <img class="headerPeekImg" src="" alt="">
+                    <div class="redLine"></div>
+                  </div>
+                  <div class="headerPeek" style="--delay: 1.2s">
+                    <div class="closeTrigger"></div>
+                    <img class="headerPeekImg" src="" alt="" >
+                    <div class="redLine"></div>
+                  </div>
+                  <div class="headerPeek" style="--delay: 1.5s">
+                    <div class="closeTrigger"></div>
+                    <img class="headerPeekImg" src="" alt="" >
+                    <div class="redLine"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="headerSneakPeeksReveal">
+                <div class="imgGifContainer">
+                  <div class="sneakPeakRevealImgContainer">
+                    <img class="revealImg" src="" alt="">
+                    <div class="sneakInfo">
+                      <div class="nameClassContainer">
+                        <div class="sneakName">
+                          <p>
+                            Name:
+                          </p>
+                          <p class="charName">
+                            Yui
+                          </p>
+                        </div>
+                        <div class="sneakClass">
+                          <p >
+                            Class:
+                          </p>
+                          <p class="charClass">
+                            SSS
+                          </p>
+                        </div>
+                      </div>
+                      <div class="clan">
+                        <p>
+                          ESPER
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="revealDialogueGIFCard">
+                    <img class="revealDialogueGIF" src="" alt="">
+                  </div>
+                </div>
+                
+                <div class="revealDialogue">
+                  
+                  <div class="revealDialogueCard">
+                    <div class="peekBio">
+                      <span class='abIntro'> </span> 
+                      <span class='abAb'>Abilities</span> 
+                      <dl class='skillSet'>
+                        <dt class='spSkill'>
+                        </dt>
+                        <dd class='skillD'>
+                          
+                        </dd>
+                        <dt class='spSkill'>
+                        </dt> 
+                        <dd class='skillD'>
+                        </dd>
+                        <dt class='spSkill'>
+                        </dt>
+                        <dd class='skillD'>
+                        </dd>
+                        <dt class='spSkill'>
+                        </dt>
+                        <dd class='skillD'>
+                        </dd>
+                      </dl>
+                      <dl class='otSkillSet'>
+                        <dt class='otOt' >
+                          Other notable abilities
+                        </dt>
+                        <dd class='otSD'>
+                        </dd>
+                        <dd class='otSD'>
+                        </dd>
+                        <dd class='otSD'>
+                        </dd>
+                        <dd class='otSD'>
+                        </dd>
+                        <dd class='otSD'>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+                <div class="sRC">
+                  <div></div>
+                </div>
+              </div>
+
+              <div class="mobileViewDescription">
+                <div class="mVDesCard">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis odit excepturi ut laborum odio alias. Nam esse illo enim quam illum debitis hic quae quos, iste maiores, quis consequuntur impedit.
+                </div>
+              </div>
+
+            </div>
+
+
+            <img class="headerFaqTitleImg" src="/imgs/header/FAQ.webp" alt="">
+            <div class="headerFaqContainer">
+              
+              <div class="headerFaqCard">
+                <img class="headerFaqMascot" src="/imgs/header/mascotFaq.webp" alt="">
+                <div class="headerFaqTitleNum">
+                  <div class="headerFaqTitle">What is CXGNUS?</div>
+                  <div class="headerFaqNum">1/7</div>
+                </div>
+                <div class="headerFaqRedLineContent">
+                  <div class="headerFaqRedLine"></div>
+                  <div class="headerFaqContent">
+                    <p class="headerFaqContentP"></p>
+                  </div>
+                </div>
+                <div class="headerFaqLoadingNext">
+                  <img class="headerFaqExit" src="/imgs/header/exit.png" alt="">
+                  <div class=" hfC">
+                    <div></div>
+                  </div>
+                  <img class="headerFaqNext" src="/imgs/arrowR.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="about">
+            <div id="aboutSection">
+              <div class="aboutCard">
+                <div class="bgBlur"></div>
+                <div class="pAbout">
+                  <span>ABOUT US</span>
+                  <p>Different people, characteristics, and backgrounds, united together to form one big resonance. These are the people who helped build what CXGNUS is now and still aims to be. Meet the team behind CXGNUS.</p>
+                </div>
+                <div class="aboutBottomBar">
+                  <div class="hfC">
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="indiContainer">
+              <div class="indiSideSocmed">
+                <a href="https://discord.com/invite/sVsdPmFHsy" target="_blank">
+                  <img src="/imgs/discord.png" alt="">
+                </a>
+                <a href="https://twitter.com/cxgnusnft" target="_blank">
+                  <img src="/imgs/twitter.png" alt="">
+                </a>
+              </div>
+
+              <div class="indiBottomSocmed">
+                <a href="https://discord.com/invite/sVsdPmFHsy" target="_blank">
+                    <img src="/imgs/discord.png" alt="" srcset="">
+                </a>
+                <a href="https://twitter.com/cxgnusnft" target="_blank">
+                    <img src="/imgs/twitter.png" alt="" srcset="">
+                </a>
+              </div>
+
+              <div id="pioneersSectionRev">
+                
+                <div class="pioneersSectionTitleRev">
+                  <p>PIO<span class="highlightedLetter">N</span>EERS</p>
+                  <img src="/imgs/header/pioneers japanese.png" alt="">
+                </div>
+                <div class="indiClassCards">
+                  <div class="indiInfoCard">
+                    <img class="indiPic" src="" alt="">
+                    <div class="infiInfoP">
+                      <p class="indiTitle">Founder, Creative Director, Management, & Head of Marketing</p>
+                      <p class="indiScrName">Yuta</p>
+                    </div>
+                  </div>
+                  <div class="indiInfoCard">
+                    <img class="indiPic" src="" alt="">
+                    <div class="infiInfoP">
+                      <p class="indiTitle">Co-Founder, Lead Artist, & UI/UX Designer</p>
+                      <p class="indiScrName">Suoh</p>
+                    </div>
+                  </div>
+                  <div class="indiInfoCard">
+                    <img class="indiPic" src="" alt="">
+                    <div class="infiInfoP">
+                      <p class="indiTitle">Co-Founder & Head Developer</p>
+                      <p class="indiScrName">Shibakinu</p>
+                    </div>
+                  </div>
+                  <div class="indiInfoCard">
+                    <img class="indiPic" src="" alt="">
+                    <div class="infiInfoP">
+                      <p class="indiTitle">Front-End Web Developer</p>
+                      <p class="indiScrName">Dondycles</p>
+                    </div>
+                  </div>
+                </div>
+
+                
+              </div>
+
+              <div id="artDeptandMngmtSection">
+                <div class="artDeptSection">
+                  <div class="artDeptSectionTitle">
+                    <p>A<span>R</span>T DEPART<span>M</span>ENT</p>
+                    <img src="imgs/header/art department japanese.png" alt="">
+                  </div>
+                  <div class="indiClassCards">
+                    <div class="indiInfoCard">
+                      <img class="indiPic" src="" alt="">
+                      <div class="infiInfoP">
+                        <p class="indiTitle">Illustrator & Concept Artist
+                        </p>
+                        <p class="indiScrName">Nemu</p>
+                      </div>
+                    </div>
+                    <div class="indiInfoCard">
+                      <img class="indiPic" src="" alt="">
+                      <div class="infiInfoP">
+                        <p class="indiTitle">Background Artist & Concept Artist</p>
+                        <p class="indiScrName" style="font-size: 35px;">Freshcakes</p>
+                      </div>
+                    </div>
+                    <div class="indiInfoCard">
+                      <img class="indiPic" src="" alt="">
+                      <div class="infiInfoP">
+                        <p class="indiTitle">Pixel Artist</p>
+                        <p class="indiScrName" style="font-size: px;">Crypto Benny</p>
+                      </div>
+                    </div>
+                    <div class="indiInfoCard">
+                      <img class="indiPic" src="" alt="">
+                      <div class="infiInfoP">
+                        <p class="indiTitle">Music Producer</p>
+                        <p class="indiScrName">Xius</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="managementSection">
+                  <div class="managementSectionTitle">
+                    <p>MANA<span>G</span>EMENT</p>
+                    <img src="imgs/header/management japanese.png" alt="">
+                  </div>
+                  <div class="indiClassCards">
+                    <div class="indiInfoCard">
+                      <img class="indiPic" src="" alt="">
+                      <div class="infiInfoP">
+                        <p class="indiTitle">Secretary</p>
+                        <p class="indiScrName" style="font-size: 35px;">Devil Fish</p>
+                      </div>
+                    </div>
+                    <div class="indiInfoCard">
+                      <img class="indiPic" src="" alt="">
+                      <div class="infiInfoP">
+                        <p class="indiTitle">Brand Manager</p>
+                        <p class="indiScrName">Adah</p>
+                      </div>
+                    </div>
+                    <div class="indiInfoCard">
+                      <img class="indiPic" src="" alt="">
+                      <div class="infiInfoP">
+                        <p class="indiTitle">Community Manager</p>
+                        <p class="indiScrName">Anni</p>
+                      </div>
+                    </div>
+                    <div class="indiInfoCard">
+                      <img class="indiPic" src="" alt="">
+                      <div class="infiInfoP">
+                        <p class="indiTitle">Head Moderator</p>
+                        <p class="indiScrName">Shiuga </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="indiClassCards">
+                    <div class="indiInfoCard">
+                      <img class="indiPic" src="" alt="">
+                      <div class="infiInfoP">
+                        <p class="indiTitle">Moderator</p>
+                        <p class="indiScrName">Zy</p>
+                      </div>
+                    </div>
+                    <div class="indiInfoCard">
+                      <img class="indiPic" src="" alt="">
+                      <div class="infiInfoP">
+                        <p class="indiTitle">Moderator</p>
+                        <p class="indiScrName">Maxine </p>
+                      </div>
+                    </div>
+                    <div class="indiInfoCard">
+                      <img class="indiPic" src="" alt="">
+                      <div class="infiInfoP">
+                        <p class="indiTitle">Moderator</p>
+                        <p class="indiScrName" style="font-size: 35px;">TokyoGuys</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="popUpImageView">
+                <div class="viewCard">
+                  <div class="closeSection">
+                    <p class="viewCloseButton">CLOSE</p>
+                  </div>
+                  <div class="contentSection">
+                    <div class="viewImageContainer">
+                      <img class="viewImg" src="" alt="">
+                    </div>
+                    <div class="viewInfoContainer">
+                      <div class="viewName">
+                        <p class="viewNameP">YUTA</p>
+                      </div>
+                      <div class="viewDescription">
+                        <p><span>Role: </span> <span class="viewRole">Founder & Management</span></p>
+                        <p><span>Level: </span> <span class="lvl"></span> </p>
+                        <p><span>Save Point: </span > <span class="origin"></span></p>
+                        <p><span>Bio: </span></p>
+                        <div class="viewBio">
+                          <p class="bioP"></p>
+                        </div>
+                      </div>
+                      <div class="viewSocmed">
+                        <p class="twUn"></p>
+                        <a href="" class="twLink" target="_blank">
+                          <img src="imgs/twitterWhite.png" alt="Twitter logo">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="aboutBg">
+              <img src="/imgs/blurredBg.webp" alt="Blurry Background Image">
+            </div>
+
+
+          </div>
+
+          <div id="map">
+            <div class="mapBg">
+              <img class="mapBgImg" src="" alt="">
+            </div>
+
+            <div class="mapUpperBg">
+              <img class="mapBgBlack" src="/imgs/map/zigzagBlack.png" alt="">
+              <img class="mapBgRed"src="/imgs/map/zigzagRed.png" alt="">
+            </div>
+            
+            <div class="mapSideSocmed">
+              <a href="https://discord.com/invite/sVsdPmFHsy" target="_blank">
+                <img src="/imgs/discord.png" alt="">
+              </a>
+              <a href="https://twitter.com/cxgnusnft" target="_blank">
+                <img src="/imgs/twitter.png" alt="">
+              </a>
+            </div>
+            <div class="mapBottomSocmed">
+              <a href="https://discord.com/invite/sVsdPmFHsy" target="_blank">
+                  <img src="/imgs/discord.png" alt="" srcset="">
+              </a>
+              <a href="https://twitter.com/cxgnusnft" target="_blank">
+                  <img src="/imgs/twitter.png" alt="" srcset="">
+              </a>
+            </div>
+            <div class="mapTitleContainer">
+              <img src="/imgs/map/mapTitle.png" alt="">
+              <img class="cxgLogo" src="/imgs/map/CXGNUS_.png" alt="">
+              <img class="mapLogo" src="/imgs/map/MAP_.png" alt="">
+              <img class="japLogo" src="/imgs/map/jap.png" alt="">
+            </div>
+
+            <div class="mapContent">
+              <div class="chapters">
+                <div class="chapProl" style="--d: 0s">
+                  <p>PR<span>O</span>LOGUE</p>
+                  <img src="/imgs/map/prologue japanese.png" alt="">
+                </div>
+                <div class="chap1" style="--d: .2s">
+                  <p>CHAP<span>T</span>ER: <span>1</span></p>
+                  <img src="/imgs/map/chapter 1 japanese.png" alt="">
+                </div>
+                <div class="chap2" style="--d: .4s">
+                  <p><span>C</span>HAPTER: <span>2</span></p>
+                  <img src="/imgs/map/chapter 2 japanese.png" alt="">
+                </div>
+              </div>
+              <div class="chaptersContent">
+                <div class="chapContentCard">
+                  <div class="nextButtonContainer">
+                    <img class="chapNextBtn" src="/imgs/arrowR.png" alt="">
+
+                    <img class="chapExitBtn" src="/imgs/exit.png" alt="">
+                    <div class="cNC">
+                      <div></div>
+                    </div>
+                  </div>
+                  <div class="chapContentContainer">
+                    <p class="chapContentTitle"></p>
+                    <p class="chapContentContext"></p>
+
+                    <p class="chapContentTitle"></p>
+                    <p class="chapContentContext"></p>
+
+                   <p class="chapPage">page 1 out of 1</p>
+                  </div>
+                </div>
+                <img class="mapCXGLogo" src="/imgs/map/cxgnusLogo.webp" alt="">
+              </div>
+            </div>
+
+            <div class="mapContentMobileView"> 
+              <div class="mapTitleContainerMV">
+                <img src="/imgs/map/mapTitleMV.png" alt="">
+              </div>
+              <div class="chaptersMV">
+                <div class="chapProlMV">
+                  <p>PR<span>O</span>LOGUE</p>
+                  <img src="/imgs/map/prologue japanese.png" alt="">
+
+                </div>
+                <div class="chap1MV">
+                  <p>CHAP<span>T</span>ER: <span>1</span></p>
+                  <img src="/imgs/map/chapter 1 japanese.png" alt="">
+
+                </div>
+                <div class="chap2MV">
+                  <p><span>C</span>HAPTER: <span>2</span></p>
+                  <img src="/imgs/map/chapter 2 japanese.png" alt="">
+
+                </div>
+              </div>
+              <div class="chaptersContentScrollContainer">
+                <div class="chaptersContentMV">
+                  <div class="chapterMainContentMV">
+                    <p class="chapContentTitleMV"></p>
+                    <p class="chapContentContextMV"></p>
+
+                    <p class="chapContentTitleMV"></p>
+                    <p class="chapContentContextMV"></p>
+
+                    <p class="chapContentTitleMV"></p>
+                    <p class="chapContentContextMV"></p>
+
+                    <p class="chapContentTitleMV"></p>
+                    <p class="chapContentContextMV"></p>
+                  </div>
+                </div>
+                <div class="chapterBottomContentMV">
+                  <img class="cBA" src="/imgs/arrowR.png" alt="">
+                  <p class="chapPageMV"></p>
+                  <img class="cBE" src="/imgs/exit.png" alt="">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div> 
+
+
+        <div id="footerSection">
+          <div class="socMedsContainer">
+            <a href="https://discord.com/invite/sVsdPmFHsy" target="_blank">
+                <img src="/imgs/discord.png" alt="" srcset="">
+            </a>
+            <a href="https://twitter.com/cxgnusnft" target="_blank">
+                <img src="/imgs/twitter.png" alt="" srcset="">
+            </a>
+          </div>
+      
+          <div class="designContainer" style="z-index: -1">
+            <div class="designInitialFooter">
+              <div class="designFooter">
+                <div class="redFooter"></div>
+                <div class="orangeFooter"></div>
+                <div class="redFooter1"></div>
+                <div class="orangeFooter1"></div>
+                <div class="redFooter1"></div>
+                <div class="orangeFooter"></div>
+                <div class="redFooter2"></div>
+              </div>
+            </div>
+          </div>
+      
+          <footer>
+            <p class="footer">© 2022 CXGNUS | All Rights Reserved</p>
+          </footer>
+        </div>
+      </div>
+
+      
+    </div>
+  </body>
+  
