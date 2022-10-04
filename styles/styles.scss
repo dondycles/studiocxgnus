@@ -160,15 +160,16 @@ html{
                 box-sizing: border-box;
                 padding: 20px;
                 background-color: #121212ea;
-                max-width: 400px;
-                max-height: 400px;
+                width: 400px;
+                height: 420px;
                 margin: auto 10px;
                 border-radius: 15px;
+                position: relative;
 
                 .headerPromptCard{
                     max-width: 400px;
                     width: 100%;
-                    max-height: 300px;
+                    height: 100%;
                     overflow-y: scroll;
 
                     scroll-behavior: smooth !important;
@@ -186,13 +187,18 @@ html{
                     
 
                     .promptRedLine{
+                        box-sizing: border-box;
+                        position: absolute;
                         height: 3px;
-                        width: 80%;
+                        top: 20px;
+                        left: 20px;
+                        right: 20px;
                         margin: 0px auto 0px auto;
                         background-color: var(--red);
                         &.active{
-                            width: 0%;
-                            transition: width .3s ease;
+                            left: 50%;
+                            right: 50%;
+                            transition: left .3s ease, right .3s ease;
                         }
                     }
 
@@ -316,6 +322,7 @@ html{
             box-sizing: border-box;
             border-top: 5px red;
             padding: 30px 10px;
+            position: relative;
 
             .patchNotesCard{
                 max-width: 400px;
@@ -325,18 +332,23 @@ html{
                 flex-direction: column;
                 justify-content: center;
                 overflow: scroll;
+
+
                 &::-webkit-scrollbar{
                     width: 0;
                 }
     
                 .promptRedLinePatch{
+                    position: absolute;
+                    left: 20px;
+                    right: 20px;
                     height: 3px;
-                    width: 80%;
                     margin: 0px auto 0px auto;
                     background-color: var(--red);
                     &.active{
-                        width: 0%;
-                        transition: width .3s ease;
+                        left: 50%;
+                        right: 50%;
+                        transition: left .3s ease, right .3s ease;
                     }
                 }
     

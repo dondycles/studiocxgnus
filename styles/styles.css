@@ -144,15 +144,16 @@ html .loading {
   box-sizing: border-box;
   padding: 20px;
   background-color: rgba(18, 18, 18, 0.9176470588);
-  max-width: 400px;
-  max-height: 400px;
+  width: 400px;
+  height: 420px;
   margin: auto 10px;
   border-radius: 15px;
+  position: relative;
 }
 .headerContainer .headerPromptContainer .headerPromptScrollable .headerPromptCard {
   max-width: 400px;
   width: 100%;
-  max-height: 300px;
+  height: 100%;
   overflow-y: scroll;
   scroll-behavior: smooth !important;
   cursor: var(--cursor);
@@ -161,14 +162,19 @@ html .loading {
   width: 2px;
 }
 .headerContainer .headerPromptContainer .headerPromptScrollable .headerPromptCard .promptRedLine {
+  box-sizing: border-box;
+  position: absolute;
   height: 3px;
-  width: 80%;
+  top: 20px;
+  left: 20px;
+  right: 20px;
   margin: 0px auto 0px auto;
   background-color: var(--red);
 }
 .headerContainer .headerPromptContainer .headerPromptScrollable .headerPromptCard .promptRedLine.active {
-  width: 0%;
-  transition: width 0.3s ease;
+  left: 50%;
+  right: 50%;
+  transition: left 0.3s ease, right 0.3s ease;
 }
 .headerContainer .headerPromptContainer .headerPromptScrollable .headerPromptCard .promptContent {
   margin: 20px auto auto auto;
@@ -276,6 +282,7 @@ html .loading {
   box-sizing: border-box;
   border-top: 5px red;
   padding: 30px 10px;
+  position: relative;
 }
 .headerContainer .patchNotesContainer .patchNotesScrollableContainer .patchNotesCard {
   max-width: 400px;
@@ -290,14 +297,17 @@ html .loading {
   width: 0;
 }
 .headerContainer .patchNotesContainer .patchNotesScrollableContainer .patchNotesCard .promptRedLinePatch {
+  position: absolute;
+  left: 20px;
+  right: 20px;
   height: 3px;
-  width: 80%;
   margin: 0px auto 0px auto;
   background-color: var(--red);
 }
 .headerContainer .patchNotesContainer .patchNotesScrollableContainer .patchNotesCard .promptRedLinePatch.active {
-  width: 0%;
-  transition: width 0.3s ease;
+  left: 50%;
+  right: 50%;
+  transition: left 0.3s ease, right 0.3s ease;
 }
 .headerContainer .patchNotesContainer .patchNotesScrollableContainer .patchNotesCard .promptContent {
   margin: 20px auto auto auto;
