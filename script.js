@@ -3048,6 +3048,7 @@ mintTrigger.addEventListener('click', function(){
     mintPage.style.display = "flex";
   }, 1000);
   setTimeout(function(){
+    window.location = "https://www.studiocxgnus-mint.com/";
   }, 2000);
 })
 
