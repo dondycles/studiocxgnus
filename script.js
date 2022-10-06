@@ -586,6 +586,7 @@ homeTrigger.addEventListener('click', () => {
 
     aboutPage.style.display = "none";
     mapPage.style.display = "none";
+    mintPage.style.display = "none"
 
 
     rightMenuItemImg[0].classList.remove('homeTrig');
@@ -640,6 +641,7 @@ centerMenuTeam.addEventListener('click', () => {
 
     headerPage.style.display = "none";
     mapPage.style.display = "none";
+    mintPage.style.display = "none"
 
     rightMenuItemImg[0].classList.remove('teamTrig');
     rightMenuItemImg[1].classList.remove('teamTrig');
@@ -696,6 +698,7 @@ mapTrigger.addEventListener('click', function(){
 
     headerPage.style.display = "none";
     aboutPage.style.display = "none";
+    mintPage.style.display = "none"
 
     rightMenuItemImg[0].classList.remove('mapTrig');
     rightMenuItemImg[1].classList.remove('mapTrig');
@@ -751,6 +754,7 @@ rightMenuItemImg[2].addEventListener('mouseleave', function(){
 });
 
 const mapBg = document.querySelector('.mapBgImg');
+const mintBg = document.querySelector('.mintBgImg');
 const moon = document.querySelector('.moon');
 const clouds = document.querySelector('.clouds');
 
@@ -791,6 +795,7 @@ setInterval(function(){
   if(utcHour==0 || utcHour==24){
     headerImg.src = "/imgs/header/Rednight/rednight.webp";
     mapBg.src = "/imgs/header/Rednight/rednight.webp";
+    mintBg.src = "/imgs/header/Rednight/rednight.webp";
     moon.src = "/imgs/header/Rednight/redmoon.png";
     clouds.src = "/imgs/header/Rednight/redcloud.png";
     moon.classList.remove('sun');
@@ -800,6 +805,7 @@ setInterval(function(){
   if(utcHour>=1 && utcHour<=4 ){
     headerImg.src = "/imgs/header/Rednight/rednight.webp";
     mapBg.src = "/imgs/header/Rednight/rednight.webp";
+    mintBg.src = "/imgs/header/Rednight/rednight.webp";
     moon.src = "/imgs/header/Rednight/redmoon.png";
     clouds.src = "/imgs/header/Rednight/redcloud.png";
     moon.classList.remove('sun');
@@ -811,6 +817,7 @@ setInterval(function(){
   if(utcHour>=5 && utcHour<=11){
     headerImg.src = "/imgs/header/Morning/morning.webp";
     mapBg.src = "/imgs/header/Morning/morning.webp";
+    mintBg.src = "/imgs/header/Morning/morning.webp";
     moon.src = "/imgs/header/Morning/morningsun.png";
     clouds.src = "/imgs/header/Morning/morningcloud.png";
 
@@ -821,6 +828,7 @@ setInterval(function(){
   if(utcHour>=12 && utcHour<=17){
     headerImg.src = "/imgs/header/Sunset/sunset.webp";
     mapBg.src = "/imgs/header/Sunset/sunset.webp";
+    mintBg.src = "/imgs/header/Sunset/sunset.webp";
     moon.src = "/imgs/header/Sunset/sunsetsun.png";
     clouds.src = "/imgs/header/Sunset/sunsetcloud.png";
 
@@ -832,6 +840,7 @@ setInterval(function(){
   if(utcHour >= 18 && utcHour<=23){
     headerImg.src = "/imgs/header/Night/night.webp";
     mapBg.src = "/imgs/header/Night/night.webp";
+    mintBg.src = "/imgs/header/Night/night.webp";
     moon.src = "/imgs/header/Night/nightmoon.png";
     clouds.src = "/imgs/header/Night/nightcloud.png";
     moon.classList.add('moonNight');
@@ -2986,3 +2995,60 @@ promptButtonPatch.addEventListener('click', function(){
   patchNotesContainer.classList.remove('active')
   patchLogoSide.classList.remove('focus')
 })
+
+
+const mintTrigger = document.querySelector('#leftMenuMint');
+const mintPage = document.querySelector('#mint')
+
+mintTrigger.addEventListener('click', function(){
+
+  menuMainContainer.classList.add('pointNone');
+  html.style.overflow = 'unset';
+  footerSection.style.display = 'none';
+
+  rightMenuItemImg[0].classList.add('mapTrig');
+  rightMenuItemImg[1].classList.add('mapTrig');
+  rightMenuItemImg[2].classList.add('mintTrig');
+  centerMenuTeam.classList.add('mapTrig');
+  leftMenuItemImg[0].classList.add('mapTrig');
+  leftMenuItemImg[1].classList.add('mintTrig');
+  leftMenuItemImg[2].classList.add('mapTrig');
+
+  setTimeout(function(){
+    loadingBG.style.zIndex = '12';
+    loadingBG.style.transform = "translateY(0%)";
+    menuToggle.click();
+
+    rightMenuItemImg[0].classList.remove('mapTrig');
+    rightMenuItemImg[1].classList.remove('mapTrig');
+    rightMenuItemImg[2].classList.remove('mintTrig');
+    leftMenuItemImg[0].classList.remove('mapTrig');
+    leftMenuItemImg[1].classList.remove('mintTrig');
+    leftMenuItemImg[2].classList.remove('mapTrig');
+    centerMenuTeam.classList.remove('mapTrig');
+    menuMainContainer.classList.remove('pointNone');
+    onLoad();
+
+
+  }, 600)
+
+  chapProl.classList.remove('animate')
+  chap1.classList.remove('animate')
+  chap2.classList.remove('animate')
+
+  cxgLogo.classList.remove('animate')
+  mapLogo.classList.remove('animate')
+  japLogo.classList.remove('animate')
+
+  headerPage.style.display = "none";
+  aboutPage.style.display = "none";
+  mapPage.style.display = "none";
+
+  setTimeout(function(){
+    mintPage.style.display = "flex";
+  }, 1000);
+  setTimeout(function(){
+    window.location = "https://www.studiocxgnus-mint.com/";
+  }, 2000);
+})
+
