@@ -210,6 +210,18 @@ html .loading {
   width: 100%;
   text-align: center;
 }
+.headerContainer .headerPromptContainer .headerPromptScrollable .headerPromptCard .promptContent .promptP a {
+  margin: 0;
+  padding: 0;
+  color: #7289da;
+  font-weight: bolder;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: red;
+  display: contents;
+}
 .headerContainer .headerPromptContainer .headerPromptScrollable .headerPromptCard .promptButton {
   margin: 20px auto 0px auto;
   width: 150px;
