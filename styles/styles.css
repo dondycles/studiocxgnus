@@ -4460,8 +4460,6 @@ h1 {
   }
 }
 .menuMainContainer .mavMainMenuContainer .navMainMenuCenter {
-  pointer-events: none;
-  -webkit-filter: grayscale(1);
   margin: auto auto 0px 0px;
   transform: perspective(1500px) translateZ(1500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   opacity: 0%;
