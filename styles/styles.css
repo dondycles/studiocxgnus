@@ -2202,7 +2202,10 @@ html .loading {
   display: flex;
   flex-direction: column;
 }
-.headerContainer .headerSneakPeeksReveal .revealDialogue .revealDialogueCard .peekBio dd, .headerContainer .headerSneakPeeksReveal .revealDialogue .revealDialogueCard .peekBio dt, .headerContainer .headerSneakPeeksReveal .revealDialogue .revealDialogueCard .peekBio dl, .headerContainer .headerSneakPeeksReveal .revealDialogue .revealDialogueCard .peekBio span {
+.headerContainer .headerSneakPeeksReveal .revealDialogue .revealDialogueCard .peekBio dd,
+.headerContainer .headerSneakPeeksReveal .revealDialogue .revealDialogueCard .peekBio dt,
+.headerContainer .headerSneakPeeksReveal .revealDialogue .revealDialogueCard .peekBio dl,
+.headerContainer .headerSneakPeeksReveal .revealDialogue .revealDialogueCard .peekBio span {
   color: white;
   text-align: justify;
 }
@@ -3739,7 +3742,8 @@ a:hover {
   pointer-events: none;
 }
 
-.storyLine p, h1 {
+.storyLine p,
+h1 {
   overflow: hidden;
   position: relative;
   background-color: var(--red);
@@ -3751,7 +3755,8 @@ a:hover {
   transition: opacity 1s ease, transform 0.5s 0.5s ease;
 }
 
-.storyLine.active p, h1 {
+.storyLine.active p,
+h1 {
   opacity: 100%;
   transform: translateY(0%);
   transition: opacity 1s ease, transform 0.5s 0.5s ease;
@@ -4455,6 +4460,8 @@ a:hover {
   }
 }
 .menuMainContainer .mavMainMenuContainer .navMainMenuCenter {
+  pointer-events: none;
+  -webkit-filter: grayscale(1);
   margin: auto auto 0px 0px;
   transform: perspective(1500px) translateZ(1500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   opacity: 0%;
@@ -4479,7 +4486,6 @@ a:hover {
   }
 }
 .menuMainContainer .mavMainMenuContainer .navMainMenuCenter #centerMenuTeam {
-  margin-left: 0;
   padding: 20px;
   transition: transform 0.5s 0.25s ease;
 }
