@@ -124,13 +124,12 @@ html .loading {
 }
 .headerContainer .headerPromptContainer {
   position: fixed;
-  background-color: rgba(18, 18, 18, 0.4392156863);
   height: 100%;
   width: 100%;
-  z-index: 61;
-  display: flex;
+  z-index: -69;
+  display: none;
   justify-content: center;
-  pointer-events: all;
+  pointer-events: none;
   opacity: 1;
   transition: all 0.5s ease;
 }
@@ -4460,6 +4459,8 @@ h1 {
   }
 }
 .menuMainContainer .mavMainMenuContainer .navMainMenuCenter {
+  pointer-events: none;
+  -webkit-filter: grayscale(1);
   margin: auto auto 0px 0px;
   transform: perspective(1500px) translateZ(1500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   opacity: 0%;

@@ -2271,23 +2271,23 @@ let prolContent = [
     prolTitle: "MINTING PHASE",
     prolContent:
       "Transporting your NFT characters into the world of CXGNUS. Sit tight, and get ready for an adventure of a lifetime.",
-    page: "page 1 out of 2",
+    page: "page 1 out of 1",
     pageMV: "page 1 out of 1",
   },
   {
     prolTitle: "GENERAL REVEAL",
     prolContent: "More info coming soon!.",
   },
-  {
-    prolTitle: "STAKING BEGINS",
-    prolContent:
-      "More info regarding staking can be found on Chapter 1 option.",
-    page: "page 2 out of 2",
-  },
-  {
-    prolTitle: "",
-    prolContent: "",
-  },
+  // // {
+  // //   prolTitle: "STAKING BEGINS",
+  // //   prolContent:
+  // //     "More info regarding staking can be found on Chapter 1 option.",
+  // //   page: "page 2 out of 2",
+  // // },
+  // {
+  //   prolTitle: "",
+  //   prolContent: "",
+  // },
 ];
 let chap1Content = [
   {
