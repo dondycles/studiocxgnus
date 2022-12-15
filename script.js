@@ -657,61 +657,61 @@ leftMenuItemImg[0].addEventListener("mouseleave", function () {
   leftMenuItemImg[0].classList.remove("clickedAnim");
 });
 
-centerMenuTeam.addEventListener("click", () => {
-  menuMainContainer.classList.add("pointNone");
-  html.style.overflow = "unset";
-  footerSection.style.display = "none";
+// centerMenuTeam.addEventListener("click", () => {
+//   menuMainContainer.classList.add("pointNone");
+//   html.style.overflow = "unset";
+//   footerSection.style.display = "none";
 
-  centerMenuTeam.classList.add("clicked");
-  rightMenuItemImg[0].classList.add("teamTrig");
-  rightMenuItemImg[1].classList.add("teamTrig");
-  rightMenuItemImg[2].classList.add("teamTrig");
-  leftMenuItemImg[0].classList.add("teamTrig");
-  leftMenuItemImg[1].classList.add("teamTrig");
-  leftMenuItemImg[2].classList.add("teamTrig");
+//   centerMenuTeam.classList.add("clicked");
+//   rightMenuItemImg[0].classList.add("teamTrig");
+//   rightMenuItemImg[1].classList.add("teamTrig");
+//   rightMenuItemImg[2].classList.add("teamTrig");
+//   leftMenuItemImg[0].classList.add("teamTrig");
+//   leftMenuItemImg[1].classList.add("teamTrig");
+//   leftMenuItemImg[2].classList.add("teamTrig");
 
-  setTimeout(function () {
-    loadingBG.style.zIndex = "12";
-    loadingBG.style.transform = "translateY(0%)";
-    menuToggle.click();
+//   setTimeout(function () {
+//     loadingBG.style.zIndex = "12";
+//     loadingBG.style.transform = "translateY(0%)";
+//     menuToggle.click();
 
-    headerPage.style.display = "none";
-    mapPage.style.display = "none";
-    mintPage.style.display = "none";
+//     headerPage.style.display = "none";
+//     mapPage.style.display = "none";
+//     mintPage.style.display = "none";
 
-    rightMenuItemImg[0].classList.remove("teamTrig");
-    rightMenuItemImg[1].classList.remove("teamTrig");
-    rightMenuItemImg[2].classList.remove("teamTrig");
-    leftMenuItemImg[0].classList.remove("teamTrig");
-    leftMenuItemImg[1].classList.remove("teamTrig");
-    leftMenuItemImg[2].classList.remove("teamTrig");
-    menuMainContainer.classList.remove("pointNone");
-    onLoad();
-  }, 600);
+//     rightMenuItemImg[0].classList.remove("teamTrig");
+//     rightMenuItemImg[1].classList.remove("teamTrig");
+//     rightMenuItemImg[2].classList.remove("teamTrig");
+//     leftMenuItemImg[0].classList.remove("teamTrig");
+//     leftMenuItemImg[1].classList.remove("teamTrig");
+//     leftMenuItemImg[2].classList.remove("teamTrig");
+//     menuMainContainer.classList.remove("pointNone");
+//     onLoad();
+//   }, 600);
 
-  setTimeout(function () {
-    centerMenuTeam.classList.remove("active");
-    aboutPage.style.display = "block";
-  }, 1000);
-});
+//   setTimeout(function () {
+//     centerMenuTeam.classList.remove("active");
+//     aboutPage.style.display = "block";
+//   }, 1000);
+// });
 
-centerMenuTeam.addEventListener("mousedown", function () {
-  centerMenuTeam.classList.add("clickedAnim");
-});
+// centerMenuTeam.addEventListener("mousedown", function () {
+//   centerMenuTeam.classList.add("clickedAnim");
+// });
 
-centerMenuTeam.addEventListener("mouseup", function () {
-  centerMenuTeam.classList.remove("clickedAnim");
-});
-centerMenuTeam.addEventListener("touchstart", function () {
-  centerMenuTeam.classList.add("clickedAnim");
-});
+// centerMenuTeam.addEventListener("mouseup", function () {
+//   centerMenuTeam.classList.remove("clickedAnim");
+// });
+// centerMenuTeam.addEventListener("touchstart", function () {
+//   centerMenuTeam.classList.add("clickedAnim");
+// });
 
-centerMenuTeam.addEventListener("touchend", function () {
-  centerMenuTeam.classList.remove("clickedAnim");
-});
-centerMenuTeam.addEventListener("mouseleave", function () {
-  centerMenuTeam.classList.remove("clickedAnim");
-});
+// centerMenuTeam.addEventListener("touchend", function () {
+//   centerMenuTeam.classList.remove("clickedAnim");
+// });
+// centerMenuTeam.addEventListener("mouseleave", function () {
+//   centerMenuTeam.classList.remove("clickedAnim");
+// });
 
 mapTrigger.addEventListener("click", function () {
   menuMainContainer.classList.add("pointNone");
@@ -3106,9 +3106,59 @@ promptButtonPatch.addEventListener("click", function () {
 });
 
 const mintTrigger = document.querySelector("#leftMenuMint");
+const stakingTrigger = document.querySelector("#rightMenuStaking");
 const mintPage = document.querySelector("#mint");
 
-mintTrigger.addEventListener("click", function () {
+// mintTrigger.addEventListener("click", function () {
+//   menuMainContainer.classList.add("pointNone");
+//   html.style.overflow = "unset";
+//   footerSection.style.display = "none";
+
+//   rightMenuItemImg[0].classList.add("mapTrig");
+//   rightMenuItemImg[1].classList.add("mapTrig");
+//   rightMenuItemImg[2].classList.add("mintTrig");
+//   centerMenuTeam.classList.add("mapTrig");
+//   leftMenuItemImg[0].classList.add("mapTrig");
+//   leftMenuItemImg[1].classList.add("mintTrig");
+//   leftMenuItemImg[2].classList.add("mapTrig");
+
+//   setTimeout(function () {
+//     loadingBG.style.zIndex = "12";
+//     loadingBG.style.transform = "translateY(0%)";
+//     menuToggle.click();
+
+//     rightMenuItemImg[0].classList.remove("mapTrig");
+//     rightMenuItemImg[1].classList.remove("mapTrig");
+//     rightMenuItemImg[2].classList.remove("mintTrig");
+//     leftMenuItemImg[0].classList.remove("mapTrig");
+//     leftMenuItemImg[1].classList.remove("mintTrig");
+//     leftMenuItemImg[2].classList.remove("mapTrig");
+//     centerMenuTeam.classList.remove("mapTrig");
+//     menuMainContainer.classList.remove("pointNone");
+//     onLoad();
+//   }, 600);
+
+//   chapProl.classList.remove("animate");
+//   chap1.classList.remove("animate");
+//   chap2.classList.remove("animate");
+
+//   cxgLogo.classList.remove("animate");
+//   mapLogo.classList.remove("animate");
+//   japLogo.classList.remove("animate");
+
+//   headerPage.style.display = "none";
+//   aboutPage.style.display = "none";
+//   mapPage.style.display = "none";
+
+//   setTimeout(function () {
+//     mintPage.style.display = "flex";
+//   }, 1000);
+//   // setTimeout(function () {
+//   //   window.location = "https://www.studiocxgnus-mint.com/";
+//   // }, 2000);
+// });
+
+stakingTrigger.addEventListener("click", function () {
   menuMainContainer.classList.add("pointNone");
   html.style.overflow = "unset";
   footerSection.style.display = "none";
@@ -3118,7 +3168,7 @@ mintTrigger.addEventListener("click", function () {
   rightMenuItemImg[2].classList.add("mintTrig");
   centerMenuTeam.classList.add("mapTrig");
   leftMenuItemImg[0].classList.add("mapTrig");
-  leftMenuItemImg[1].classList.add("mintTrig");
+  leftMenuItemImg[1].classList.add("mapTrig");
   leftMenuItemImg[2].classList.add("mapTrig");
 
   setTimeout(function () {
@@ -3130,7 +3180,7 @@ mintTrigger.addEventListener("click", function () {
     rightMenuItemImg[1].classList.remove("mapTrig");
     rightMenuItemImg[2].classList.remove("mintTrig");
     leftMenuItemImg[0].classList.remove("mapTrig");
-    leftMenuItemImg[1].classList.remove("mintTrig");
+    leftMenuItemImg[1].classList.remove("mapTrig");
     leftMenuItemImg[2].classList.remove("mapTrig");
     centerMenuTeam.classList.remove("mapTrig");
     menuMainContainer.classList.remove("pointNone");
@@ -3153,6 +3203,6 @@ mintTrigger.addEventListener("click", function () {
     mintPage.style.display = "flex";
   }, 1000);
   setTimeout(function () {
-    window.location = "https://www.studiocxgnus-mint.com/";
+    window.location.href = "https://staking.studiocxgnus.com/";
   }, 2000);
 });
