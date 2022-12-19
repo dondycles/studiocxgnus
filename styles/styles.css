@@ -4684,7 +4684,6 @@ h1 {
   transition: transform 0.5s 0.5s ease;
   -webkit-animation: floaterL1 1s alternate infinite;
           animation: floaterL1 1s alternate infinite;
-  -webkit-filter: grayscale(1);
 }
 @media screen and (max-width: 825px) {
   .menuMainContainer .mavMainMenuContainer .navMainMenuLeft .leftMenusContainer .leftMenuItemContainer:nth-child(2) {

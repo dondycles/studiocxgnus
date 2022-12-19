@@ -3109,54 +3109,54 @@ const mintTrigger = document.querySelector("#leftMenuMint");
 const stakingTrigger = document.querySelector("#rightMenuStaking");
 const mintPage = document.querySelector("#mint");
 
-// mintTrigger.addEventListener("click", function () {
-//   menuMainContainer.classList.add("pointNone");
-//   html.style.overflow = "unset";
-//   footerSection.style.display = "none";
+mintTrigger.addEventListener("click", function () {
+  menuMainContainer.classList.add("pointNone");
+  html.style.overflow = "unset";
+  footerSection.style.display = "none";
 
-//   rightMenuItemImg[0].classList.add("mapTrig");
-//   rightMenuItemImg[1].classList.add("mapTrig");
-//   rightMenuItemImg[2].classList.add("mintTrig");
-//   centerMenuTeam.classList.add("mapTrig");
-//   leftMenuItemImg[0].classList.add("mapTrig");
-//   leftMenuItemImg[1].classList.add("mintTrig");
-//   leftMenuItemImg[2].classList.add("mapTrig");
+  rightMenuItemImg[0].classList.add("mapTrig");
+  rightMenuItemImg[1].classList.add("mapTrig");
+  rightMenuItemImg[2].classList.add("mintTrig");
+  centerMenuTeam.classList.add("mapTrig");
+  leftMenuItemImg[0].classList.add("mapTrig");
+  leftMenuItemImg[1].classList.add("mintTrig");
+  leftMenuItemImg[2].classList.add("mapTrig");
 
-//   setTimeout(function () {
-//     loadingBG.style.zIndex = "12";
-//     loadingBG.style.transform = "translateY(0%)";
-//     menuToggle.click();
+  setTimeout(function () {
+    loadingBG.style.zIndex = "12";
+    loadingBG.style.transform = "translateY(0%)";
+    menuToggle.click();
 
-//     rightMenuItemImg[0].classList.remove("mapTrig");
-//     rightMenuItemImg[1].classList.remove("mapTrig");
-//     rightMenuItemImg[2].classList.remove("mintTrig");
-//     leftMenuItemImg[0].classList.remove("mapTrig");
-//     leftMenuItemImg[1].classList.remove("mintTrig");
-//     leftMenuItemImg[2].classList.remove("mapTrig");
-//     centerMenuTeam.classList.remove("mapTrig");
-//     menuMainContainer.classList.remove("pointNone");
-//     onLoad();
-//   }, 600);
+    rightMenuItemImg[0].classList.remove("mapTrig");
+    rightMenuItemImg[1].classList.remove("mapTrig");
+    rightMenuItemImg[2].classList.remove("mintTrig");
+    leftMenuItemImg[0].classList.remove("mapTrig");
+    leftMenuItemImg[1].classList.remove("mintTrig");
+    leftMenuItemImg[2].classList.remove("mapTrig");
+    centerMenuTeam.classList.remove("mapTrig");
+    menuMainContainer.classList.remove("pointNone");
+    onLoad();
+  }, 600);
 
-//   chapProl.classList.remove("animate");
-//   chap1.classList.remove("animate");
-//   chap2.classList.remove("animate");
+  chapProl.classList.remove("animate");
+  chap1.classList.remove("animate");
+  chap2.classList.remove("animate");
 
-//   cxgLogo.classList.remove("animate");
-//   mapLogo.classList.remove("animate");
-//   japLogo.classList.remove("animate");
+  cxgLogo.classList.remove("animate");
+  mapLogo.classList.remove("animate");
+  japLogo.classList.remove("animate");
 
-//   headerPage.style.display = "none";
-//   aboutPage.style.display = "none";
-//   mapPage.style.display = "none";
+  headerPage.style.display = "none";
+  aboutPage.style.display = "none";
+  mapPage.style.display = "none";
 
-//   setTimeout(function () {
-//     mintPage.style.display = "flex";
-//   }, 1000);
-//   // setTimeout(function () {
-//   //   window.location = "https://www.studiocxgnus-mint.com/";
-//   // }, 2000);
-// });
+  setTimeout(function () {
+    mintPage.style.display = "flex";
+  }, 1000);
+  setTimeout(function () {
+    window.location = "https://mint.studiocxgnus.com/";
+  }, 2000);
+});
 
 stakingTrigger.addEventListener("click", function () {
   menuMainContainer.classList.add("pointNone");
